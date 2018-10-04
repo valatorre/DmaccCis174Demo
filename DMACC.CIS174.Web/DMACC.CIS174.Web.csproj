@@ -183,7 +183,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Week5Video.Shared\DMACC.CIS174.Shared.csproj">
+    <ProjectReference Include="..\DMACC.CIS174.Shared\DMACC.CIS174.Shared.csproj">
       <Project>{5CDE9960-3936-4664-8E8B-ADFBB08E5C69}</Project>
       <Name>DMACC.CIS174.Shared</Name>
     </ProjectReference>

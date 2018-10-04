@@ -112,11 +112,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Week5Video.Domain\DMACC.CIS174.Domain.csproj">
+    <ProjectReference Include="..\DMACC.CIS174.Domain\DMACC.CIS174.Domain.csproj">
       <Project>{0102061F-F4DE-4FA4-8079-1BAB1832F687}</Project>
       <Name>DMACC.CIS174.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Week5Video.Shared\DMACC.CIS174.Shared.csproj">
+    <ProjectReference Include="..\DMACC.CIS174.Shared\DMACC.CIS174.Shared.csproj">
       <Project>{5CDE9960-3936-4664-8E8B-ADFBB08E5C69}</Project>
       <Name>DMACC.CIS174.Shared</Name>
     </ProjectReference>
