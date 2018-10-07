@@ -38,5 +38,33 @@ namespace DMACC.CIS174.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Update()
+        {
+            return View();
+        }
+
+        public async Task<JsonResult> UpdateStudent(UpdateStudentModel student)
+        {
+            if (student.StudentId == Guid.Empty)
+                return Json(false, JsonRequestBehavior.AllowGet);
+
+            var result = await _studentOrchestrator.UpdateStudent(new StudentViewModel
+            {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                Height = student.Height,
+                Weight = student.Weight
+            });
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<JsonResult> Search(string searchString)
+        {
+            var viewModel = await _studentOrchestrator.SearchStudent(searchString);
+
+            return Json(viewModel, JsonRequestBehavior.AllowGet);
+        }
     }
 }

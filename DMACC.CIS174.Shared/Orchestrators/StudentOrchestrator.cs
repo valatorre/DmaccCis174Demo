@@ -45,5 +45,45 @@ namespace DMACC.CIS174.Shared.Orchestrators
 
             return students;
         }
+
+        public async Task<StudentViewModel> SearchStudent(string searchString)
+        {
+            var student = await _schoolContext.Students
+                .Where(x => x.StudentName.StartsWith(searchString))
+                .FirstOrDefaultAsync();
+
+            if (student == null)
+            {
+                return new StudentViewModel();
+            }
+
+            var viewModel = new StudentViewModel
+            {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                Height = student.Height,
+                Weight = student.Weight
+            };
+
+            return viewModel;
+        }
+
+        public async Task<bool> UpdateStudent(StudentViewModel student)
+        {
+            var updateEntity = await _schoolContext.Students.FindAsync(student.StudentId);
+
+            if (updateEntity == null)
+            {
+                return false;
+            }
+
+            updateEntity.StudentName = student.StudentName;
+            updateEntity.Height = student.Height;
+            updateEntity.Weight = student.Weight;
+
+            await _schoolContext.SaveChangesAsync();
+
+            return true;
+        }
     }
 }
