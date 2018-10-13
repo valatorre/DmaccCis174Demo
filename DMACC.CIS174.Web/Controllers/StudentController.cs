@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using DMACC.CIS174.Shared.Orchestrators;
+using DMACC.CIS174.Shared.Orchestrators.Interfaces;
 using DMACC.CIS174.Shared.ViewModels;
 using DMACC.CIS174.Web.Models;
 
@@ -9,7 +9,12 @@ namespace DMACC.CIS174.Web.Controllers
 {
     public class StudentController : Controller
     {
-        private StudentOrchestrator _studentOrchestrator = new StudentOrchestrator();
+        private readonly IStudentOrchestrator _studentOrchestrator;
+
+        public StudentController(IStudentOrchestrator studentOrchestrator)
+        {
+            _studentOrchestrator = studentOrchestrator;
+        }
 
         // GET: Student
         public async Task<ActionResult> Index()
