@@ -10,5 +10,6 @@ namespace DMACC.CIS174.Shared.ViewModels
         public string HeightString => Height.ToString();
         public float Weight { get; set; }
         public string WeightString => Weight.ToString();
+        public DateTime DateOfBirth { get; set; }
     }
 }
