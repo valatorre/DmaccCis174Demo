@@ -1,0 +1,28 @@
+<h2>All Students</h2>
+
+<table>
+  <thead>
+    <tr>
+      <td>Student Id</td>
+      <td>Student Name</td>
+      <td>Street Address</td>
+      <td>City</td>
+      <td>State</td>
+      <td>Zip Code</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students" [class.selected]="student === selectedStudent" (click)="onSelected(student)">
+      <td>{{student.StudentId}}</td>
+      <td>{{student.StudentName}}</td>
+      <td>{{student.Address.StreetAddress1}}</td>
+      <td>{{student.Address.City}}</td>
+      <td>{{student.Address.State}}</td>
+      <td>{{student.Address.Zip}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-get-single-student [student]="selectedStudent"></app-get-single-student>
+
+

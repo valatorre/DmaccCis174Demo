@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AutoMoq;
 using DMACC.CIS174.Shared.Services;
 using DMACC.CIS174.Shared.Services.Interfaces;
 using DMACC.CIS174.Shared.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+// ReSharper disable once IdentifierTypo
 namespace DMACC.CIS174.Test
 {
     [TestClass]

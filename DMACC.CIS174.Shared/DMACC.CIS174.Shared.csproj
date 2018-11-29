@@ -58,6 +58,7 @@
     <Compile Include="Services\DateTimeService.cs" />
     <Compile Include="Services\Interfaces\IDateOfBirthService.cs" />
     <Compile Include="Services\Interfaces\IDateTimeService.cs" />
+    <Compile Include="ViewModels\AddressViewModel.cs" />
     <Compile Include="ViewModels\StudentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
