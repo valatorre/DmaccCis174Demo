@@ -22,7 +22,6 @@ namespace DMACC.CIS174.Web.Controllers
             var studentDisplayModel = new StudentDisplayModel
             {
                 Students = await _studentOrchestrator.GetAllStudents()
-
             };
 
             return View(studentDisplayModel);
@@ -69,7 +68,7 @@ namespace DMACC.CIS174.Web.Controllers
         {
             var viewModel = await _studentOrchestrator.SearchStudent(searchString);
 
-            return Json(viewModel, JsonRequestBehavior.AllowGet);
+            return Json(viewModel);
         }
     }
 }

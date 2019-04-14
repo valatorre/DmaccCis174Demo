@@ -16,6 +16,7 @@
                 <th>Name</th>
                 <th>Height</th>
                 <th>Weight</th>
+                <th>Date of Birth</th>
             </tr>
             </thead>
             <tbody>
@@ -23,13 +24,16 @@
             {
                 <tr>
                     <td>
-                        @student.StudentName
+                        @student.StudentId
                     </td>
                     <td>
                         @student.HeightString
                     </td>
                     <td>
                         @student.WeightString
+                    </td>
+                    <td>
+                        @student.DateOfBirthString
                     </td>
                 </tr>
             }

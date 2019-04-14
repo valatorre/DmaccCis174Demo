@@ -40,7 +40,8 @@ namespace DMACC.CIS174.Shared.Orchestrators
                 StudentId = x.StudentId,
                 StudentName = x.StudentName,
                 Height = x.Height,
-                Weight = x.Weight
+                Weight = x.Weight,
+                DateOfBirth = x.DateOfBirth.Value
             }).ToListAsync();
 
             return students;

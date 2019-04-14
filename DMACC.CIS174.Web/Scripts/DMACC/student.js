@@ -23,7 +23,7 @@ function updateStudent() {
         dataType: "json",
         data: {
             StudentId: studentId,
-            StudentName: studentName,
+            Studentnam: studentName,
             Height: height,
             Weight: weight
         }
