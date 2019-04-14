@@ -26,7 +26,7 @@ namespace DMACC.CIS174.Shared.Orchestrators
                 StudentName = student.StudentName,
                 Height = student.Height,
                 Weight = student.Weight,
-                Address = null,
+                Addresses = null,
                 DateOfBirth = null
             });
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DMACC.CIS174.Domain.Entities
 {
@@ -9,6 +10,6 @@ namespace DMACC.CIS174.Domain.Entities
         public DateTime? DateOfBirth { get; set; }
         public decimal Height { get; set; }
         public float Weight { get; set; }
-        public Address Address { get; set; }
+        public virtual List<Address> Addresses { get; set; }
     }
 }
